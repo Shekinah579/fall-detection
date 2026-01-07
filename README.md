@@ -10,8 +10,11 @@ results.
 Tech Stack:
 
 •	Python
+
 •	MediaPipe Pose – Human pose and skeleton keypoint extraction
+
 •	OpenCV – Video processing and annotation
+
 •	NumPy – Mathematical computations and confidence analysis
 
 Project Structure:
@@ -32,52 +35,53 @@ Project Structure:
 
 How the System Works:
 
-1.	The video is processed frame-by-frame
-2.	MediaPipe Pose extracts human body keypoints
-3.	Important joints are analyzed:
+1. The video is processed frame-by-frame
+2. MediaPipe Pose extracts human body keypoints
+3. Important joints are analyzed:
 
-    o	Shoulders
+   o	Shoulders
   	
-    o	Hips
+   o	Hips
   	
-    o	Knees
+   o	Knees
   	
-    o	Ankles
+   o	Ankles
   	
-5.	The system computes:
+4. The system computes:
    
-    o	Body angle using shoulder–hip orientation
+    o Body angle using shoulder–hip orientation
   	
-    o	Vertical distance between head and feet
+    o Vertical distance between head and feet
   	
-6.	A fall is detected when:
+5. A fall is detected when:
 
-    o	The body becomes nearly horizontal
+    o The body becomes nearly horizontal
   	
-    o	The person is close to the ground
+    o The person is close to the ground
   	
-    o	The posture is classified as lying
+    o The posture is classified as lying
   	
-7.	All detected falls are logged and analyzed for confidence and reliability
+6. All detected falls are logged and analyzed for confidence and reliability
 
 Fall Detection Logic:
 
 The system uses an explainable, rule-based approach instead of a black-box model.
+
 Detection Criteria:
 
-•	Body_Angle
+• Body_Angle
 
-  o	Standing → small angle
+   o	Standing → small angle
     
-  o	Lying → large angle (~90°)
+   o	Lying → large angle (~90°)
  
-•	Vertical Distance (Head to Feet)
+• Vertical Distance (Head to Feet)
 
-  o	Large → standing
+   o	Large → standing
 
-  o	Small → person on ground
+   o	Small → person on ground
 
-•    Posture Classification
+• Posture Classification
 
   o	Standing
     
@@ -103,12 +107,12 @@ How to Run the Project:
 
    python pose_detection.py --video input_video.mp4 
    
-4. Generated Outputs
+4.Generated Outputs
    
-   After execution, the following files will be created:
+ After execution, the following files will be created:
    
-    •	annotated_video.mp4
+ • annotated_video.mp4
    
-    •	fall_detection_log.txt
+ • fall_detection_log.txt
    
-    •	detection_report.txt
+ • detection_report.txt
