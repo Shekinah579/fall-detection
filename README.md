@@ -19,17 +19,17 @@ Tech Stack:
 
 Project Structure:
 
-├pose_detection.py          # Main pose & fall detection script
-
-├requirements.txt          # Project dependencies
-
-├input_video.mp4        # Input video given
-
 ├annotated_video.mp4        # Output video with skeleton overlay
+
+├detection_report.txt       # Analysis & reliability report
 
 ├fall_detection_log.txt     # Detected falls with timestamps
 
-├detection_report.txt       # Analysis & reliability report
+├input_video.mp4            # Input video given
+
+├pose_detection.py          # Main pose & fall detection script
+
+├requirements.txt           # Project dependencies
 
 ├README.md                  # Project documentation
 
